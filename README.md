@@ -18,11 +18,9 @@
 
 ## 📚 학습 주제
 ## 네트워크
-- [title](link)
-
-## 운영체제
-- [title](link)
+- [OSI 7 layer](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/OSI%207%EA%B3%84%EC%B8%B5.md)
 - [TCP & UDP](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/TCP%20%26%20UDP)
 
+## 운영체제
+
 ## 데이터베이스
-- [title](link)
