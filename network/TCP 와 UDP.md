@@ -1,6 +1,6 @@
 # TCP ( Transmission Control Protocol)
 - OSI 계층 모델에서 전송 계층(Transport Layer)에 해당합니다.
-- 종단간 호스트강의 신뢰적인 연결지향 서비스를 제공합니다.
+- 종단간 호스트간의 신뢰적인 연결지향 서비스를 제공합니다.
 
 ## TCP의 특징
 - 신뢰성있는 데이터 전송
@@ -29,6 +29,8 @@
 
 ## TCP 제어비트 (Flag Bit) 정보
 ![](https://user-images.githubusercontent.com/55661631/143239148-48413217-312d-4a06-aae3-bd740c33fa9c.png)
+Urgent, Push, Acknowledgement, Synchronization, Finish, Reset
+
 
 ## TCP의 연결 및 해제 과정
 ![](https://nesoy.github.io/assets/posts/20181010/2.png)
