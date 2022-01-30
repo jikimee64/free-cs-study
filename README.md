@@ -28,3 +28,7 @@
 ## 데이터베이스
 - [인덱스 - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
 - [인덱스 - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%202.md)
+
+## 개념
+- [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/MSA.md)
+- [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
