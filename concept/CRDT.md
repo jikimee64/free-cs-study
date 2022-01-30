@@ -77,3 +77,4 @@
 [CRDT 와 OT](https://channel.io/ko/blog/crdt_vs_ot)
 
 [CAP 정리](https://ko.wikipedia.org/wiki/CAP_%EC%A0%95%EB%A6%AC)
+
