@@ -21,8 +21,10 @@
 - [OSI 7 layer](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/OSI%207%EA%B3%84%EC%B8%B5.md)
 - [TCP & UDP](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/TCP%20%26%20UDP)
 - [라우팅](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/%EB%9D%BC%EC%9A%B0%ED%8C%85.md)
+- [로드밸런싱](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1.md)
 
 ## 운영체제
 
 ## 데이터베이스
 - [인덱스 - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
+- [인덱스 - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%202.md)
