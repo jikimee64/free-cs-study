@@ -111,7 +111,7 @@ PPID(Pairwise-pseudonymous DIDs) : 하나의 분산아이디만 있다면, 주�
 #### Benny 님의 자료
 - 아래 운전면허 등록을 중앙 기관이 발급해야한다. 이 부분은 다른 기관의 참여가 필요하다고 생각한 뜻을 굳히게  만들어줬다.
 
-<img src="https://user-images.githubusercontent.com/75015048/152626762-166cf40f-ed09-4a6f-904d-dc37a25e6bc8.png" width="80%" />
+<img src="https://user-images.githubusercontent.com/75015048/152626762-166cf40f-ed09-4a6f-904d-dc37a25e6bc8.png" width="50%" />
 
 
 
