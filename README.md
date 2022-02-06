@@ -24,6 +24,7 @@
 - [로드밸런싱](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1.md)
 
 ## 운영체제
+- [DeadLock](https://github.com/jikimee64/Jichul-cs-study/blob/master/operating-system/DeadLock.md)
 
 ## 데이터베이스
 - [인덱스 - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
@@ -32,3 +33,4 @@
 ## 개념
 - [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/MSA.md)
 - [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
+- [SSI & DID](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/%5BDocs%5D%20-%20SSI%20%26%20DID.md)
