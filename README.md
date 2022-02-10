@@ -34,3 +34,12 @@
 - [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/MSA.md)
 - [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
 - [SSI & DID](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/%5BDocs%5D%20-%20SSI%20%26%20DID.md)
+
+## 📆 일정
+| 날짜 | 우철 | 지수 |
+|----|----|------|
+| 22.01.08 | OSI 7계층 | TCP와 UDP |
+| 22.01.15 | 인덱스 - 1 | 라우팅 |
+| 22.01.23 | 인덱스 - 2 | 로드밸런싱 |
+| 22.01.30 | MSA | CRDT |
+| 22.02.06 | DeadLock | SSI & DID |
