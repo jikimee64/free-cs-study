@@ -88,3 +88,9 @@ Client 등록을 통홰 아래 세 가지 정보를 부여받음.
 [OAuth 란 무엇일까](https://showerbugs.github.io/2017-11-16/OAuth-%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C)
 
 [OAuth 개념 및 동작 방식 이해하기](https://tecoble.techcourse.co.kr/post/2021-07-10-understanding-oauth/)
+
+[Web2 - OAuth2, Egoing Lee](https://www.inflearn.com/course/web2-oauth2/)
+
+[Spring OAuth2](https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html)
+
+[Passport stratege for Google OAuth 2.0](http://www.passportjs.org/packages/passport-google-oauth2/)
