@@ -62,7 +62,7 @@ VM에 오류가 발생해도 다른 VM으로 퍼지지 않게끔 서로 충돌�
 
 ## Docker 이미지와 컨테이너
 ### 이미지
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/689ad05d-4b44-4402-9400-6b11d4c1c31e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220209T164415Z&X-Amz-Expires=86400&X-Amz-Signature=6227825659d80c67bf310bae98c8f57fff380c9103ec6e5b99c2a0b6cb056955&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://camo.githubusercontent.com/6c357478f32066a0eea9204ebc498ce037cc2075ae21b25b35a8cc83797eb1d0/68747470733a2f2f73756269637572612e636f6d2f6173736574732f61727469636c655f696d616765732f323031372d30312d31392d646f636b65722d67756964652d666f722d626567696e6e6572732d312f646f636b65722d696d6167652e706e67)
 - 도커 이미지는 컨테이너 실행에 필요한 파일과 설정값 등을 가지고 있으며 해당 이미지를 이용해서 컨테이너를
 생성하며, 컨테이너를 이용해 프로그램을 실행한다.
 
