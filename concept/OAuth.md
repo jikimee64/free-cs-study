@@ -68,10 +68,98 @@ Client 등록을 통홰 아래 세 가지 정보를 부여받음.
 3. 사용자 암호 자격 증명 ( Resource Owner Password Credentials )
 4. 클라이언트 자격 증명 ( Client Credentials )
 
-[an introduction to oauth 2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 를 참고 했더니 Implicit 와 Password Grant 권한 부여 유형은 안전하지 않은 것으로 간주되어 사용을 안하는 것이 좋다고 한다. 
+- [an introduction to oauth 2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 를 참고 했더니 Implicit 와 Password Grant 권한 부여 유형은 안전하지 않은 것으로 간주되어 사용을 안하는 것이 좋다고 한다. 
+- 템플릿을 이용해서 만드는 경우 백엔드에서 처리하여 인증코드 방식을 이용
+- 프론트엔드와 백엔드가 나눠진 경우는 프론트엔드에서 사용자 토큰을 받은 뒤 백엔드에서 프론트 엔드에서 보낸 사용자 토큰을 우리 사이트에서 사용할 JWT 토큰으로 반환해주는 방식 이용한다고 한다.
 
 
+# Spring Oauth 2.0
+- depency 추가
+- [mvnrepository spring-boot-starter-oauth2-client](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-oauth2-client)
 
+```bash
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-oauth2-client</artifactId>
+</dependency>
+
+implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-client'
+```
+- application.yml 파일
+```yml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <client id value>
+            client-secret: <client secret value>
+            scope:
+            - email
+            - profile
+            ...
+```
+
+- Config 클래스
+
+```class
+@Configuration
+@EnableWebSecurity // 스프링 시큐리티 필터가 스프링 필터 체인에 등록 
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	
+    ...
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable();
+		http.authorizeRequests()
+		  ...
+		  .and()
+			  .formLogin()
+			  .loginPage("/loginForm")
+			  .loginProcessingUrl("/login") 
+			  .defaultSuccessUrl("/")
+		  .and()
+		  	.oauth2Login()
+		  	.loginPage("/loginForm")
+		  	.userInfoEndpoint()
+		  	.userService( DefaultOAuth2UserService 구현체 );
+            // 구글 로그인이 완료된 뒤의 후처리(DefaultOAuth2UserService) 코드X, (액세스 토큰 + 사용자프로필정보 O) 
+	}
+	
+}
+```
+
+- **DefaultOAuth2UserService** 를 상속받은 클래스에서 **loadUser() 인자인 OAuth2UserRequest(userRequest)** 의 데이터를 찍은 것
+
+```
+{
+    sub=103643394868242208269,
+    name=박지수, 
+    given_name=박지수, 
+    picture=https://lh3.googleusercontent.com/a/AATXAJzVt88Y0b7tzAY2d3P2p76-h-qMXwz4LvyRC8-R=s96-c,email=jsmini3814@gmail.com, 
+    email_verified=true, 
+    locale=ko
+}
+```
+
+- 기존의 **UserDetails** 와 **OAuth2User** 를 Implements 한 구현체를 이용해 일반 로그인과 OAuth 로그인 둘다 가능한 클래스 구현 
+
+```
+  OAuth2User 를 파헤치면  -> OAuth2AuthenticatedPrincipal { getAttributes() } -> AuthenticatedPrincipal { getName() } 
+
+    @Override 
+	public Map<String, Object> getAttributes() {
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
+```
+- 다른 일반 로그인인지 OAuth로 받은 정보인지 데이터베이스에 보관 할 수 있도록 설계한다.
 
 # 참고
 [An Introduction to OAuth 2 - Mitchell Anicas](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
@@ -94,3 +182,9 @@ Client 등록을 통홰 아래 세 가지 정보를 부여받음.
 [Spring OAuth2](https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html)
 
 [Passport stratege for Google OAuth 2.0](http://www.passportjs.org/packages/passport-google-oauth2/)
+
+[스프링부트 시큐리티 & JWT - 최주호](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0/dashboard)
+
+[codingspecialist/Springboot-JWT-React-OAuth2.0-Eazy](https://github.com/codingspecialist/Springboot-JWT-React-OAuth2.0-Eazy)
+
+[\[React\] - 카카오 소셜 로그인](https://velog.io/@seize/React-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%86%8C%EC%85%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8#8-kakaoauthlogin-%ED%95%A8%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%ED%8C%9D%EC%97%85%EC%B0%BD-%EC%B6%9C%EB%A0%A5-%EB%B0%8F-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%B2%98%EB%A6%AC)
