@@ -103,7 +103,7 @@ spring:
 
 - Config 클래스
 
-```class
+```java
 @Configuration
 @EnableWebSecurity // 스프링 시큐리티 필터가 스프링 필터 체인에 등록 
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
@@ -133,7 +133,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 - **DefaultOAuth2UserService** 를 상속받은 클래스에서 **loadUser() 인자인 OAuth2UserRequest(userRequest)** 의 데이터를 찍은 것
 
-```
+```json
 {
     sub=103643394868242208269,
     name=박지수, 
@@ -146,7 +146,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 - 기존의 **UserDetails** 와 **OAuth2User** 를 Implements 한 구현체를 이용해 일반 로그인과 OAuth 로그인 둘다 가능한 클래스 구현 
 
-```
+```java
   OAuth2User 를 파헤치면  -> OAuth2AuthenticatedPrincipal { getAttributes() } -> AuthenticatedPrincipal { getName() } 
 
     @Override 
