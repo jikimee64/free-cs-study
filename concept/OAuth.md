@@ -133,7 +133,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 - **DefaultOAuth2UserService** 를 상속받은 클래스에서 **loadUser() 인자인 OAuth2UserRequest(userRequest)** 의 데이터를 찍은 것
 
-```json
+```
 {
     sub=103643394868242208269,
     name=박지수, 
@@ -150,14 +150,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
   OAuth2User 를 파헤치면  -> OAuth2AuthenticatedPrincipal { getAttributes() } -> AuthenticatedPrincipal { getName() } 
 
     @Override 
-	public Map<String, Object> getAttributes() {
-		return null;
-	}
+public Map<String, Object> getAttributes() {
+	return null;
+}
 
-	@Override
-	public String getName() {
-		return null;
-	}
+@Override
+public String getName() {
+	return null;
+}
 ```
 - 다른 일반 로그인인지 OAuth로 받은 정보인지 데이터베이스에 보관 할 수 있도록 설계한다.
 
