@@ -188,3 +188,5 @@ public String getName() {
 [codingspecialist/Springboot-JWT-React-OAuth2.0-Eazy](https://github.com/codingspecialist/Springboot-JWT-React-OAuth2.0-Eazy)
 
 [\[React\] - 카카오 소셜 로그인](https://velog.io/@seize/React-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%86%8C%EC%85%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8#8-kakaoauthlogin-%ED%95%A8%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%ED%8C%9D%EC%97%85%EC%B0%BD-%EC%B6%9C%EB%A0%A5-%EB%B0%8F-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%B2%98%EB%A6%AC)
+
+[zkdlu  - OAuth2.0 + JWT를 사용한 토큰 기반 서버 인증 구현하기](https://zkdlu.tistory.com/12)
