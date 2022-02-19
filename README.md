@@ -35,14 +35,17 @@
 - [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
 - [SSI & DID](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/%5BDocs%5D%20-%20SSI%20%26%20DID.md)
 - [Docker - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/Docker%20-%201.md)
+- [Docker - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/Docker%20-%202.md)
 - [Oauth](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/OAuth.md)
+- [TDD - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/TDD%20-%201.md)
 
 ## 📆 일정
-| 날짜       | 우철          | 지수          |
-|----------|-------------|-------------|
-| 22.01.08 | OSI 7계층     | TCP와 UDP    |
-| 22.01.15 | 인덱스 - 1     | 라우팅         |
-| 22.01.23 | 인덱스 - 2     | 로드밸런싱       |
-| 22.01.30 | MSA         | CRDT        |
-| 22.02.06 | DeadLock    | SSI & DID   |
-| 22.02.13 | Docker - 1  | Oauth |
+| 날짜       | 우철         | 지수        |
+|----------|------------|-----------|
+| 22.01.08 | OSI 7계층    | TCP와 UDP  |
+| 22.01.15 | 인덱스 - 1    | 라우팅       |
+| 22.01.23 | 인덱스 - 2    | 로드밸런싱     |
+| 22.01.30 | MSA        | CRDT      |
+| 22.02.06 | DeadLock   | SSI & DID |
+| 22.02.13 | Docker - 1 | Oauth     |
+| 22.02.19 | Docker - 2 | TDD - 2   |
