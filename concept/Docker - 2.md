@@ -339,7 +339,7 @@ ENTRYPOINT [ "java", "-jar", "/home/java/application.jar" ]
 ```
 ![Untitled](https://user-images.githubusercontent.com/52563841/154736466-a2f978f9-76ab-40c5-aa33-c8140ee71455.png)
 
-- 분할한 layer를 Dockerfile에서 아래와 같이 사용해서 이미지 생성 
+- Dockerfile에서 아래와 같이 분할 및 실행 설정 적용&사용해서 이미지 생성 
 ```
 FROM adoptopenjdk:11-jre-hotspot as builder
 WORKDIR application
