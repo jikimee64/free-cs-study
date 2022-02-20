@@ -339,7 +339,7 @@ ENTRYPOINT [ "java", "-jar", "/home/java/application.jar" ]
 ```
 ![Untitled](https://user-images.githubusercontent.com/52563841/154736466-a2f978f9-76ab-40c5-aa33-c8140ee71455.png)
 
-- Dockerfile에서 아래와 같이 분할 및 실행 설정 적용&사용해서 이미지 생성 
+- Dockerfile에서 아래와 같이 분할 및 실행 설정 적용 및 사용해서 이미지 생성 
 ```
 FROM adoptopenjdk:11-jre-hotspot as builder
 WORKDIR application
@@ -364,11 +364,29 @@ CMD ["-spring.profiles.active=default"]
 높은 디렉터리의 COPY에서 변경이 일어나서 새롭게 layer를 만들게 되면 그 이후부터 새로이 강제적으로 
 layer가 만들어 지게 된다.
 
-```
-docker build --build-arg JAR_FILE={경로}/myapp.jar
-```
-- Dockerfile 실행
-- jar가 있는 파일을 명시하고 싶으면 ```--build-arg```옵션을 사용해서 경로 변수 지정
+#### docker build
+- 생성한 Dockefile을 통해 이미지를 생성한다.
+- Dockerfile이 있는 해당 디렉터리에서 아래 명령어를 실행하면 알아서 Dockerfile 이름을 가진 파일을 찾는다.
+  ```
+  docker build -t [출력할 이미지 이름] .
+  ```
+  ```
+  docker build --build-arg JAR_FILE={경로}/myapp.jar
+  ```
+  - jar가 있는 파일을 명시하고 싶으면 ```--build-arg```옵션을 사용해서 경로 변수 지정
+  - SpringBoot기준 프로젝트의 루트에 놓고 실행하면 명시안해도 됨
+  ```
+  docker build -t server-app-web:1.0 --tag server-app-web:1.0 .
+  ```
+- docker build시 반드시 하나 이상의 아규먼트를 지정해야 한다.  
+- ```-t```옵션을 사용하여 출력할 이미지 이름을 지정할 수 있다.
+- ```-f```옵션을 사용하여 변경된 Dockerfile의 이름을 지정할 수 있다.
+
+- SpringBoot Dockerfile 예시2 결과
+![Untitled](https://user-images.githubusercontent.com/52563841/154840637-6784e686-0c30-4157-91fa-0a2266ddd527.png)
+![Untitled](https://user-images.githubusercontent.com/52563841/154840697-78bae136-5e3a-4707-aa6d-f108f08d704f.png)
+![Untitled](https://user-images.githubusercontent.com/52563841/154840930-ae1dd4f8-c5a8-4ee7-b5e4-20d47b3fe4a6.png)
+- 이미지 생성 후 실행까지 잘된걸 확인 할 수 있다.
 
 #### SpringBoot 2.3이상 Dockerfile 없이 이미지 생성 
 - gradle에 설정 후 Dockerfile 없이 이미지 파일을 만들려면 아래의 Gradle 명령어로 이미지 만들면 된다.
@@ -376,15 +394,6 @@ docker build --build-arg JAR_FILE={경로}/myapp.jar
 chmod +x gradlew (옵션: 리눅스에서 사용시)
 ./gradlew bootBuildImage --imageName=[원하는 이미지명]
 ```
-
-#### docker build
-- 생성한 Dockefile을 통해 이미지를 생성한다.
-- Dockerfile이 있는 해당 디렉터리에서 아래 명령어를 실행하면 알아서 Dockerfile 이름을 가진 파일을 찾는다.
-  ```
-  docker build -t [출력할 이미지 이름] .
-  ```
-- ```-t```옵션을 사용하여 출력할 이미지 이름을 지정할 수 있다.
-- ```-f```옵션을 사용하여 변경된 Dockerfile의 이름을 지정할 수 있다.
 
 ### Docker backup & restore
 - Docker를 사용하다보면 이미지 혹은 컨테이너를 백업하고 복구하는 상황이 올 수 있다.
