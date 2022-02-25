@@ -417,3 +417,146 @@ chmod +x gradlew (옵션: 리눅스에서 사용시)
 - export의 경우 컨테이너를 동작하기 위한 모든 파일이 압축되기 때문에 tar파일에는 루트 시스템 전체가 담겨져 있다.
 - save의 경우는 이미지 레이어 구조까지 포함된 형태로 압축되기 때문에 출력된 파일이 .tar로 동일하더라도, 압축되어 있는 
 파일 구조 및 디렉터리 형식이 다르기 때문에 매칭이되는 명령어로 저장/복구 해야 한다.
+
+### Docker Compose
+- 컨테이너를 실행하는데 필요한 옵션과 의존성 및 실행 순서를 한 번에 정의하여 작성하고 실행 가능
+- 도커 설정
+  ```
+  docker-compose --verison
+  ```
+- 모든 파일의 이름은 *docker-compose.yml*로 작성
+- **version**
+  - 버전을 작성하는 부분
+  - Docker 버전 혹은 파일 규격에 따른 지원하는 옵션이 달라지게 되는데 버전을 3으로 지정하게 되면 3으로 
+  시작하는 최신 버전을 사용하겠다는 의미
+  - 모든 파일과 옵션이 가장 최신의 버전만을 지원하는 것은 아니기 때문에 각 환경 혹은 옵션에 따라서 
+  버전의 차이는 존재할 수 있다.
+  ```
+  version: '3.4' 
+  ```
+- **image**
+  - docker-compose에서 실행할 이미지를 지정할 수 있으며, 만약 이미작 로컬에 없는 경우에는 Docker Hub에서
+  이미지를 다운로드 한다.
+  ```
+  services: # 앞으로 실행할 애플리케이션이 서비스임을 지칭
+    xpressengine:
+      image: jusk2/xpressengine
+  ```
+  - **build**
+    - Docker Hub 혹은 개인 레파지토리에 이미지가 저장되어 있지 않거나, Dockerfile을 통해 이미지를 직접
+    생성하고자 하는 경우에 많이 사용
+    ```
+    services: # 앞으로 실행할 애플리케이션이 서비스임을 지칭
+      nginx:
+        build: .
+    ```
+    - Dockerfile의 이름이 다르거나 다른 경로에 존재한다면 다음과 같이 수행할 수 있다.
+    ```
+    services:
+      nginx:
+        build:
+          context: /home/lucas # Dockerfile이 있는 경로(절대경로 또는 상대경로)
+          dockerfile: Dockerfile-Dev # 파일명이 Dockerfile이 아닐 경우 파일명 기입
+    ```
+  - **command / entrypoint**
+    - Dockerfile의 cmd, entrypoint와 거의 동일, 단 docker-compose의 우선순위가 높다.
+        ```
+        services:
+          nginx:
+            container_name: nginx # 컨테이너의 이름을 지정
+            image: nginx:latest
+            command: -- --dev=reload
+        ```
+  - **ports**
+    - 컨테이너와 외부 호스트 간의 포트를 바인딩 하기 위한 명령어로서 바인딩할 포트를 여러 개 지정하거나,
+      포트의 범위 등을 지정할 수 있다. ""을 통해 문자열로 지정할 수 있다.
+        ```
+        services:
+          database:
+            image: mariadb
+              ports:
+                - 3306:3306
+                - "1000:80"
+                - "16001:16001"
+                - "12000-12009:12000-12009"
+         ```
+  - **depends_on**
+    - 서비스가 종속적 순서대로 실행할 수 있음을 보장한다. 웹 어플리케이션과 DB가 존재한다면, DB가 실행되고
+    그 다음 웹 어플리 케이션이 실행될 수 있도록 설정
+        ```
+        service:
+          db:
+            image: postgres
+              web:
+                image: nginx
+                  depend_on: db
+         ```
+  - **environment, env_file**
+    - 컨테이너를 실행할 때 필요한 환경변수를 입력한다. 환경 변수 파일을 직접 읽어야 사용할 수도 있다.
+        ```
+        services:
+          database:
+            image: mariadb
+          environment:
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_DATABASE:
+            MYSQL_USER:
+            MYSQL_PASSWORD:
+        ```      
+        ```
+        env_file:
+          - ./common.env
+          - ./apps/web.env
+        ```      
+  - **volumes**
+    - 컨테이너와 호스트 간의 볼륨을 마운트 하는데 사용. 추가적으로 :ro를 통해서 볼륨을 읽기 전용으로 실행 가능
+        ```
+        volumes:
+          - /var/log/test:/var/log
+          - ~/configs:/etc/configs/:ro
+        ```      
+
+- docker-compose.yml 실행 중지, 로그 확인
+```
+docker-compose up
+docker-compose up -d #데몬으로 실행
+
+docker-compose stop # docker-compose.yml로 실행된 모든 컨테이너 서비스를 중지
+docker-compose logs # docker-compose.yml로 정의된 컨테이너의 로그를 보여줌
+docker-compose logs -f # 로그를 계속 보여줌
+```
+- docker-compose.yml gitlab 예제
+```
+web:
+   image: 'gitlab/gitlab-ce:latest'
+   restart: always
+   hostname: 'IP'
+   container_name: gitlab
+   environment:
+     GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://#{IP}'
+      nginx['listen_port'] = 80
+      nginx['listen_https'] = false
+      gitlab_rails['gitlab_shell_ssh_port'] = 2224
+      gitlab_rails['time_zone'] = 'Asia/Seoul'
+      gitlab_rails['smtp_enable'] = true
+      gitlab_rails['smtp_address'] = "smtp.gmail.com"
+      gitlab_rails['smtp_port'] = 587
+      gitlab_rails['smtp_user_name'] = "이메일"
+      gitlab_rails['smtp_password'] = "smtp 패스워드"
+      gitlab_rails['smtp_domain'] = "smtp.gmail.com"
+      gitlab_rails['smtp_authentication'] = "login"
+      gitlab_rails['smtp_enable_starttls_auto'] = true
+      gitlab_rails['smtp_openssl_verify_mode'] = 'none'
+      gitlab_rails['smtp_enable_starttls_auto'] = true
+      gitlab_rails['gitlab_email_from'] = '{이메일}'
+      gitlab_rails['gitlab_email_reply_to'] = '{이메일}'
+   ports:
+     - '8081:80'
+     - '2224:22'
+   volumes:
+     - '/home/dockermount/gitlab/config:/etc/gitlab'
+     - '/home/dockermount/gitlab/logs:/var/log/gitlab'
+     - '/home/dockermount/gitlab/data:/var/opt/gitlab'
+     - '/home/dockermount/gitlab/backups:/var/opt/gitlab/backups'
+```

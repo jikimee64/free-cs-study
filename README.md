@@ -48,4 +48,4 @@
 | 22.01.30 | MSA        | CRDT      |
 | 22.02.06 | DeadLock   | SSI & DID |
 | 22.02.13 | Docker - 1 | Oauth     |
-| 22.02.19 | Docker - 2 | TDD - 2   |
+| 22.02.19 | Docker - 2 | TDD - 1   |
