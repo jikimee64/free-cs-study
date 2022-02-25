@@ -17,29 +17,34 @@
  - 스터디 당일날 학습한 내용 발표
 
 ## 📚 학습 주제
-## 네트워크
+
+### 아키텍처
+- [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/architecture/MSA.md)
+
+### cloud
+- [Docker - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/cloud/Docker%20-%201.md)
+- [Docker - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/cloud/Docker%20-%202.md)
+
+### 개념
+- [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
+- [SSI & DID](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/%5BDocs%5D%20-%20SSI%20%26%20DID.md)
+- [Oauth](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/OAuth.md)
+- [TDD - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/TDD%20-%201.md)
+
+### 데이터베이스
+- [인덱스 - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
+- [인덱스 - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%202.md)
+
+### 네트워크
 - [OSI 7 layer](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/OSI%207%EA%B3%84%EC%B8%B5.md)
 - [TCP & UDP](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/TCP%20%26%20UDP)
 - [라우팅](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/%EB%9D%BC%EC%9A%B0%ED%8C%85.md)
 - [로드밸런싱](https://github.com/jikimee64/Jichul-cs-study/blob/master/network/%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1.md)
 
-## 운영체제
+### 운영체제
 - [DeadLock](https://github.com/jikimee64/Jichul-cs-study/blob/master/operating-system/DeadLock.md)
 
-## 데이터베이스
-- [인덱스 - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
-- [인덱스 - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/database/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%202.md)
-
-## 개념
-- [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/MSA.md)
-- [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
-- [SSI & DID](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/%5BDocs%5D%20-%20SSI%20%26%20DID.md)
-- [Docker - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/Docker%20-%201.md)
-- [Docker - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/Docker%20-%202.md)
-- [Oauth](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/OAuth.md)
-- [TDD - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/concept/TDD%20-%201.md)
-
-## 📆 일정
+### 📆 일정
 | 날짜       | 우철         | 지수        |
 |----------|------------|-----------|
 | 22.01.08 | OSI 7계층    | TCP와 UDP  |
