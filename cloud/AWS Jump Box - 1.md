@@ -47,7 +47,7 @@
   - public01 : 10.10.1.0/24
   - private01 : 10.10.10.0/24
   - public02 : 10.10.2.0/24
-  - private01 : 10.10.20.0/24
+  - private02 : 10.10.20.0/24
 ![](https://images.velog.io/images/hkjs96/post/d7e4f272-5d91-40fa-853a-0e5af7897a05/image.png)
 
   
