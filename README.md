@@ -24,6 +24,7 @@
 ### cloud
 - [Docker - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/cloud/Docker%20-%201.md)
 - [Docker - 2](https://github.com/jikimee64/Jichul-cs-study/blob/master/cloud/Docker%20-%202.md)
+- [AWS Jump Box - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/cloud/AWS%20Jump%20Box%20-%201.md)
 
 ### 개념
 - [CRDT](https://github.com/hkjs96/Jichul-cs-study/blob/master/concept/CRDT.md)
@@ -44,6 +45,9 @@
 ### 운영체제
 - [DeadLock](https://github.com/jikimee64/Jichul-cs-study/blob/master/operating-system/DeadLock.md)
 
+### 빅데이터
+- [Kafka - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/bigdata/Kafka%20-%201.md)
+
 ### 📆 일정
 | 날짜       | 우철         | 지수        |
 |----------|------------|-----------|
@@ -54,3 +58,4 @@
 | 22.02.06 | DeadLock   | SSI & DID |
 | 22.02.13 | Docker - 1 | Oauth     |
 | 22.02.19 | Docker - 2 | TDD - 1   |
+| 22.02.17 | Kafka - 1 | AWS Jump Box - 1 |
