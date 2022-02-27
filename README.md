@@ -58,4 +58,4 @@
 | 22.02.06 | DeadLock   | SSI & DID |
 | 22.02.13 | Docker - 1 | Oauth     |
 | 22.02.19 | Docker - 2 | TDD - 1   |
-| 22.02.17 | Kafka - 1 | AWS Jump Box - 1 |
+| 22.02.27 | Kafka - 1 | AWS Jump Box - 1 |
