@@ -1,4 +1,4 @@
-# Jichul CS Study
+# Free CS Study
 > Since 2022.01.01
 ## 👨‍💻  스터디원
 <p>
