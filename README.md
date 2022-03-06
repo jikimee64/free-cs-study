@@ -8,6 +8,9 @@
 <a href="https://github.com/hkjs96">
   <img src="https://avatars.githubusercontent.com/u/75015048?v=4" width="100">
 </a>
+<a href="https://github.com/jeong57281">
+  <img src="https://avatars.githubusercontent.com/u/44913775?v=4" width="100">
+</a>
 </p>
 
 ## 📝 스터디 규칙
@@ -49,13 +52,14 @@
 - [Kafka - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/bigdata/Kafka%20-%201.md)
 
 ### 📆 일정
-| 날짜       | 우철         | 지수        |
-|----------|------------|-----------|
-| 22.01.08 | OSI 7계층    | TCP와 UDP  |
-| 22.01.15 | 인덱스 - 1    | 라우팅       |
-| 22.01.23 | 인덱스 - 2    | 로드밸런싱     |
-| 22.01.30 | MSA        | CRDT      |
-| 22.02.06 | DeadLock   | SSI & DID |
-| 22.02.13 | Docker - 1 | Oauth     |
-| 22.02.19 | Docker - 2 | TDD - 1   |
-| 22.02.27 | Kafka - 1 | AWS Jump Box - 1 |
+| 날짜       | 우철         | 지수        | 정현       |
+|----------|------------|-----------|----------|
+| 22.01.08 | OSI 7계층    | TCP와 UDP  |  |
+| 22.01.15 | 인덱스 - 1    | 라우팅       |  |
+| 22.01.23 | 인덱스 - 2    | 로드밸런싱     |  |
+| 22.01.30 | MSA        | CRDT      |  |
+| 22.02.06 | DeadLock   | SSI & DID |  |
+| 22.02.13 | Docker - 1 | Oauth     |  |
+| 22.02.19 | Docker - 2 | TDD - 1   |  |
+| 22.02.27 | Kafka - 1  | AWS Jump Box - 1 |          |
+| 22.03.06 | Kafka - 2  |  |          |
