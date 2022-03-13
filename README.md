@@ -21,6 +21,9 @@
 
 ## 📚 학습 주제
 
+### 형상관리
+- [Git 중급 명령어](https://github.com/jikimee64/free-cs-study/blob/master/version-control/Git%20%EC%A4%91%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.docx)
+
 ### 아키텍처
 - [MSA](https://github.com/hkjs96/Jichul-cs-study/blob/master/architecture/MSA.md)
 
@@ -50,16 +53,18 @@
 
 ### 빅데이터
 - [Kafka - 1](https://github.com/jikimee64/Jichul-cs-study/blob/master/bigdata/Kafka%20-%201.md)
+- [Kafka - 2](https://github.com/jikimee64/free-cs-study/blob/master/bigdata/Kafka%20-%202.md)
 
 ### 📆 일정
-| 날짜       | 우철         | 지수        | 정현       |
-|----------|------------|-----------|----------|
-| 22.01.08 | OSI 7계층    | TCP와 UDP  |  |
-| 22.01.15 | 인덱스 - 1    | 라우팅       |  |
-| 22.01.23 | 인덱스 - 2    | 로드밸런싱     |  |
-| 22.01.30 | MSA        | CRDT      |  |
-| 22.02.06 | DeadLock   | SSI & DID |  |
-| 22.02.13 | Docker - 1 | Oauth     |  |
-| 22.02.19 | Docker - 2 | TDD - 1   |  |
-| 22.02.27 | Kafka - 1  | AWS Jump Box - 1 |          |
-| 22.03.06 | Kafka - 2  |  |          |
+| 날짜       | 우철         | 지수        | 정현 |
+|----------|------------|-----------|----|
+| 22.01.08 | OSI 7계층    | TCP와 UDP  |    |
+| 22.01.15 | 인덱스 - 1    | 라우팅       |    |
+| 22.01.23 | 인덱스 - 2    | 로드밸런싱     |    |
+| 22.01.30 | MSA        | CRDT      |    |
+| 22.02.06 | DeadLock   | SSI & DID |    |
+| 22.02.13 | Docker - 1 | Oauth     |    |
+| 22.02.19 | Docker - 2 | TDD - 1   |    |
+| 22.02.27 | Kafka - 1  | AWS Jump Box - 1 |    |
+| 22.03.06 | Kafka - 2  |  |    |
+| 22.03.13 | Git 중급 명령어 |  |    |
